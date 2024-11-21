@@ -1,3 +1,223 @@
 *{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon{
+    margin: -30px 40px;
+    border: none;
+}
+.navbar {
+    padding: 15px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: -50px 40px;
+    display: flex;
+    gap: 70px;
+    font-family: 'Georgia', serif;
+}
+.navbar a {
+    text-decoration: none;
+    color:#A00412;
+    padding: 8px 15px;
+    transition: color 0.3s ease;
+    margin: 0 15px;
+    font-size: 20px;
+    display: flex;
+}
+.navbar a:hover {
+    text-decoration: underline;
+}
+.dropdown {
+    position: relative; 
+    display: inline-block;
+}
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color:#fffbf6; 
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+.dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    color: #A00412;
+    font-size: 1em;
+    text-align: left;
+    text-decoration: none;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    
+}
+.header_icons{
+    display: flex;
+    gap: 7px;
+    margin-right: 70px;
+    transition: transform 0.3s;
+}
+.header_icons img:hover {
+    transform: scale(1.2);
+}
+.reviews {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    background-color: #A00412;
+    color: #f9f9f9;
+    border-radius: 15px;
+    margin: 8px 20px;
+    gap: 20px;
+}
+.reviews img {
+    width: 50%;
+    height: auto;
+    border-radius: 15px;
+}
+.Customers h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f9f9f9;
+}
+.Customers p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #f9f9f9;
+    line-height: 1.4;
+}
+.why_us{
+    padding: 30px;
+    background-color: #fffbf6;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* .why_us:hover{
+    background-image: url(icons/why\ us\ 2.png);
+    background-color: transparent;
+} */
+.both_us{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    border-radius: 15px;
+    margin: 8px 20px;
+    gap: 20px;
+    text-align: left;
+}
+.both_us img{
+    max-width: 40%;
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+.both_us p{
+    flex: 1;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #A00412;
+    text-align: justify;
+    background-color: #fffbf6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.why_us h1 {
+    text-align: center;
+    color: #A00412;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-family: 'Georgia', serif ;
+}
+
+/* General Section Styling */
+.services {
+    padding: 40px;
+    text-align: center;
+    background-color: #fffaf3; /* Light cream to match bakery theme */
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    color: #A00412; /* Bakery theme color */
+    margin-bottom: 50px;
+    font-family: 'Georgia', serif;
+}
+
+/* Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 columns in each row */
+    gap: 40px;
+    justify-content: center; 
+    margin: 0 auto;
+}
+
+/* Service Card Styling */
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    background-color: #A00412;
+}
+.service-card:hover h3,
+.service-card:hover p{
+    color: #f9f9f9;
+}
+/* Icon Styling */
+.service-card .icon {
+    width: 60px; /* Smaller size */
+    height: 60px; /* Smaller size */
+    background-color: #f9f9f9; /* Light pink background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -50px auto 15px; /* Positioned a little higher */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-card .icon img {
+    width: 50%; /* Smaller image */
+    height: 40%; /* Smaller image */
+    object-fit: contain;
+}
+
+
+/* Text Styling */
+.service-card h3 {
+    font-size: 1.2rem;
+    color: #A00412;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+
