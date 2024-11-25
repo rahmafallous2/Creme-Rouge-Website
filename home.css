@@ -69,6 +69,7 @@ header {
 .header_icons img:hover {
     transform: scale(1.2);
 }
+
 .div_1 {
     background-color: #A00412;
     color: #FAF7F0;
@@ -100,7 +101,7 @@ header {
     margin-top: 5px;
 }
 .first_img{
-    margin-left: 170px;
+    margin-left: 150px;
     margin-top: -70px;
 }
 .div_2 {
@@ -586,7 +587,7 @@ html {
     background-color: #f9f9f9;
     color: #A00412;
     border: none;
-    padding: 6px 12px;
+    padding: 5px;
     font-size: 0.8rem;
     border-radius: 30px;
     cursor: pointer;
