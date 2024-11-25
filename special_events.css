@@ -69,3 +69,269 @@ header {
 .header_icons img:hover {
     transform: scale(1.2);
 }
+.special {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: #A00412;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin: 10px 10px 10px 10px;
+}
+
+.special div {
+    text-align: center;
+    background-color: #f7ebe1;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 70px 20px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.special div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.special img {
+    width: 300px;
+    max-width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.special p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    font-size: 1rem;
+    color: #A00412;
+    background-color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.special-item .btn-add-to-cart {
+    background-color: #A00412;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border: none;
+}
+
+.btn-add-to-cart {
+    background-color: #A00412;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.message-container {
+    height: 20px; /* Space reserved for the message */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.added-message {
+    display: flex;
+    align-items: center;
+    color: #A00412;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+.added-message .icon {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+
+.occasion-title {
+    background-color: #A00412;
+    color: #FAF7F0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 20px 40px;
+    margin: 0 18px;
+    border-radius: 20px;
+    justify-content: center;
+    font-family: 'Georgia', serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.footer {
+    background-color: #A00412; 
+    color: #f5f5dc; 
+    font-family: 'Arial', sans-serif; 
+    text-align: center;
+    height: 300px; 
+    border-radius: 20px;
+    padding: 20px 40px;
+    margin: 5px 18px;
+    border-radius: 20px;
+    
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0; 
+    flex-wrap: nowrap;
+}
+.footer-section {
+    flex: 1;
+    min-width: 120px; 
+    margin: 0 10px;
+    text-align: center; 
+}
+.footer-logo {
+    max-width: 120px; 
+    margin-bottom: 0; 
+}
+html {
+    scroll-behavior: smooth;
+}
+.footer-section p {
+    font-size: 0.8em; 
+    line-height: 1.2;
+    margin: 5px 0;
+    text-align: center;
+}
+.about a{
+    font-size: 0.7em; 
+    color: #f5f5dc;
+    text-decoration: none;
+    margin-right: 25px;
+}
+.about a:hover {
+    text-decoration: underline;
+}
+.footer-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 5px;
+}
+.footer-icons a img {
+    width: 18px;
+    height: 18px; 
+    transition: transform 0.3s;
+}
+.footer-icons a img:hover {
+    transform: scale(1.2);
+}
+.footer-section.contact h2 {
+    font-size: 1em; 
+    margin-bottom: 5px;
+}
+.footer-section.contact p {
+    font-size: 0.8em; 
+    margin: 3px 0;
+    text-align: center;
+}
+.footer-section.contact a {
+    color: #f5f5dc;
+    text-decoration: none;
+}
+.footer-section.contact a:hover {
+    text-decoration: underline;
+}
+.footer-section.links h2 {
+    font-size: 1em; 
+    margin-bottom: 5px;
+}
+.footer-section.links a {
+    display: block;
+    color: #f5f5dc;
+    font-size: 0.8em; 
+    margin: 2px 0;
+    text-decoration: none;
+}
+.footer-section.links a:hover {
+    text-decoration: underline;
+}
+.footer-section.subscribe h2 {
+    font-size: 1em; 
+    margin-bottom: 5px;
+}
+.footer-section.subscribe p {
+    font-size: 0.8em;
+    margin: 3px 0;
+}
+.footer-section.subscribe input[type="email"] {
+    padding: 5px;
+    font-size: 0.8em;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 180px; 
+    margin-top: 5px;
+}
+.footer-bottom {
+    text-align: center;
+    font-size: 0.75em;
+    margin-top: 50px;
+    
+}
+.footer-bottom a {
+    color: #f5f5dc;
+    text-decoration: none;
+}
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+.footer-content button{
+    background-color: #f9f9f9;
+    color: #A00412;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    
+}
+.footer-content button:hover {
+    background-color: #A00412;
+    color: #fff;
+}
+.div_1 button,.div_4 button, .footer-content button {
+    z-index: 10; 
+    position: relative;
+}

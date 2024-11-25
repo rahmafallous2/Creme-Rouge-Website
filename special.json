@@ -1,0 +1,133 @@
+{
+    "occasions": {
+        "regular": [
+            { "image": "icons/Daily sweets/Daily sweets1.jpg", "text": "" },
+            { "image": "icons/Daily sweets/Daily sweets2.jpg", "text": "" },
+            { "image": "icons/Daily sweets/Daily sweets3.jpg", "text": "" },
+            { "image": "icons/Daily sweets/Daily sweets4.jpg", "text": "" },
+            { "image": "icons/Daily sweets/Daily sweets5.jpg", "text": "" },
+            { "image": "icons/Daily sweets/Daily sweets6.jpg", "text": "" },
+            { "image": "icons/Daily sweets/Daily sweets7.jpg", "text": "" },
+            { "image": "icons/Daily sweets/Daily sweets8.jpg", "text": "" },
+            { "image": "icons/Daily sweets/Daily sweets9.jpg", "text": "" },
+            { "image": "icons/Daily sweets/Daily sweets10.jpg", "text": "" },
+            { "image": "icons/Daily sweets/Daily sweets11.jpg", "text": "" },
+            { "image": "icons/Daily sweets/Daily sweets12.jpg", "text": "" }
+        ],
+        "Christmas": {
+            "start_Date": "12-25",
+            "End_Date": "1-6",
+            "Items": [
+            { "image": "icons/Christmas/Christmas1.jpg", "text": "" },
+            { "image": "icons/Christmas/Christmas2.jpg", "text": "" },
+            { "image": "icons/Christmas/Christmas3.jpg", "text": "" },
+            { "image": "icons/Christmas/Christmas4.jpg", "text": "" },
+            { "image": "icons/Christmas/Christmas5.jpg", "text": "" },
+            { "image": "icons/Christmas/Christmas6.jpg", "text": "" },
+            { "image": "icons/Christmas/Christmas7.jpg", "text": "" },
+            { "image": "icons/Christmas/Christmas8.jpg", "text": "" },
+            { "image": "icons/Christmas/Christmas9.jpg", "text": "" },
+            { "image": "icons/Christmas/Christmas10.jpg", "text": "" },
+            { "image": "icons/Christmas/Christmas11.jpg", "text": "" },
+            { "image": "icons/Christmas/Christmas12.jpg", "text": "" }
+        ],
+        "heading": "Sprinkle joy this Christmas with our festive treats and holiday goodies!"
+        },
+        "Valentine": {
+            "Start_Date": "2-14",
+            "End_Date": "2-15",
+            "Items": [
+                { "image": "icons/Valentine/Valentine1.jpg", "text": " " },
+                { "image": "icons/Valentine/Valentine2.jpg", "text": " " },
+                { "image": "icons/Valentine/Valentine3.jpg", "text": " " },
+                { "image": "icons/Valentine/Valentine4.jpg", "text": " " },
+                { "image": "icons/Valentine/Valentine5.jpg", "text": " " },
+                { "image": "icons/Valentine/Valentine6.jpg", "text": " " },
+                { "image": "icons/Valentine/Valentine7.jpg", "text": " " },
+                { "image": "icons/Valentine/Valentine8.jpg", "text": " " },
+                { "image": "icons/Valentine/Valentine9.jpg", "text": " " },
+                { "image": "icons/Valentine/Valentine10.jpg", "text": " " },
+                { "image": "icons/Valentine/Valentine11.jpg", "text": " " },
+                { "image": "icons/Valentine/Valentine12.jpg", "text": " " }
+            ],
+            "heading": "Sweeten your love story with our heart-shaped delights this Valentine’s Day!"
+        },
+        "Easter": {
+            "Start_Date": "3-22",
+            "End_Date": "4-25",
+            "Items": [
+                { "image": "icons/Easter/Easter1.jpg", "text": " " },
+                { "image": "icons/Easter/Easter2.jpg", "text": " " },
+                { "image": "icons/Easter/Easter3.jpg", "text": " " },
+                { "image": "icons/Easter/Easter4.jpg", "text": " " },
+                { "image": "icons/Easter/Easter5.jpg", "text": " " },
+                { "image": "icons/Easter/Easter6.jpg", "text": " " },
+                { "image": "icons/Easter/Easter7.jpg", "text": " " },
+                { "image": "icons/Easter/Easter8.jpg", "text": " " },
+                { "image": "icons/Easter/Easter9.jpg", "text": " " },
+                { "image": "icons/Easter/Easter10.jpg", "text": " " },
+                { "image": "icons/Easter/Easter11.jpg", "text": " " },
+                { "image": "icons/Easter/Easter12.jpg", "text": " " }
+            ],
+            "heading": "Savor the sweetness of spring with our Easter-themed goodies!"
+        },
+        "Halloween": {
+            "Start_Date": "10-31",
+            "End_Date": "11-1",
+            "Items": [
+                { "image": "icons/Halloween/Halloween1.jpg", "text": " " },
+                { "image": "icons/Halloween/Halloween2.jpg", "text": " " },
+                { "image": "icons/Halloween/Halloween3.jpg", "text": " " },
+                { "image": "icons/Halloween/Halloween4.jpg", "text": " " },
+                { "image": "icons/Halloween/Halloween5.jpg", "text": " " },
+                { "image": "icons/Halloween/Halloween6.jpg", "text": " " },
+                { "image": "icons/Halloween/Halloween7.jpg", "text": " " },
+                { "image": "icons/Halloween/Halloween8.jpg", "text": " " },
+                { "image": "icons/Halloween/Halloween9.jpg", "text": " " },
+                { "image": "icons/Halloween/Halloween10.jpg", "text": " " },
+                { "image": "icons/Halloween/Halloween11.jpg", "text": " " },
+                { "image": "icons/Halloween/Halloween12.jpg", "text": " " }
+            ],
+            "heading": "Celebrate the spooky season with bakes too sweet to be scary!"
+        },
+        "MothersDay": {
+            "Start_Date": "5-11",
+            "End_Date": "5-12",
+            "Items": [
+                { "image": "icons/Mothers day/Mothers day1.jpg", "text": " " },
+                { "image": "icons/Mothers day/Mothers day2.jpg", "text": " " },
+                { "image": "icons/Mothers day/Mothers day3.jpg", "text": " " },
+                { "image": "icons/Mothers day/Mothers day4.jpg", "text": " " },
+                { "image": "icons/Mothers day/Mothers day5.jpg", "text": " " },
+                { "image": "icons/Mothers day/Mothers day6.jpg", "text": " " },
+                { "image": "icons/Mothers day/Mothers day7.jpg", "text": " " },
+                { "image": "icons/Mothers day/Mothers day8.jpg", "text": " " },
+                { "image": "icons/Mothers day/Mothers day9.jpg", "text": " " },
+                { "image": "icons/Mothers day/Mothers day10.jpg", "text": " " },
+                { "image": "icons/Mothers day/Mothers day11.jpg", "text": " " },
+                { "image": "icons/Mothers day/Mothers day12.jpg", "text": " " }
+                
+            ],
+            "heading": "Treat Mom to the sweetness she deserves this Mother’s Day!"
+        },
+        "FathersDay": {
+            "Start_Date": "6-15",
+            "End_Date": "6-16",
+            "Items": [
+                { "image": "icons/Fathers day/Fathers day1.jpg", "text": " " },
+                { "image": "icons/Fathers day/Fathers day2.jpg", "text": " " },
+                { "image": "icons/Fathers day/Fathers day3.jpg", "text": " " },
+                { "image": "icons/Fathers day/Fathers day4.jpg", "text": " " },
+                { "image": "icons/Fathers day/Fathers day5.jpg", "text": " " },
+                { "image": "icons/Fathers day/Fathers day6.jpg", "text": " " },
+                { "image": "icons/Fathers day/Fathers day7.jpg", "text": " " },
+                { "image": "icons/Fathers day/Fathers day8.jpg", "text": " " },
+                { "image": "icons/Fathers day/Fathers day9.jpg", "text": " " },
+                { "image": "icons/Fathers day/Fathers day10.jpg", "text": " " },
+                { "image": "icons/Fathers day/Fathers day11.jpg", "text": " " },
+                { "image": "icons/Fathers day/Fathers day12.jpg", "text": " " }
+            ],
+            "heading": "Make his day extra sweet with our Father’s Day baked delights!"
+        }
+    }
+}
