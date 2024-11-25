@@ -172,6 +172,51 @@ label{
     font-size: 1.2rem;
 }
 
+.chat-message {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.chat-message.bot {
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.chat-message.user {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+   
+    
+}
+.bot-message {
+    background: #ffebe2;
+    color: #333;
+    align-self: flex-start;
+}
+
+.user-message {
+    background: #ffc1a1;
+    color: #333;
+    align-self: flex-end;
+}
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+    object-fit: cover;
+}
+.bot-message, .user-message {
+    background: #ffebe2;
+    color: #333;
+    padding: 8px;
+    border-radius: 8px;
+    max-width: 70%;
+    line-height: 1.5;
+}
+
+.user-message {
+    background: #ffc1a1;
+}
 .chat-body {
     flex: 1;
     padding: 10px;

@@ -74,8 +74,12 @@
                 <h3>Live Chat</h3>
             </div>
             <div class="chat-body">
-                <p>Hello! How can we assist you today?</p>
+                <div class="chat-message bot">
+                    <img src="icons/icons8-bot-64.png" alt="Bot" class="profile-icon">
+                    <p class="bot-message">Hi! How can I help you today?</p>
+                </div>
             </div>
+            
             <div class="chat-footer">
                 <input type="text" placeholder="Type your message here..." />
                 <button>Send</button>
@@ -148,12 +152,26 @@
         }
     });
     function appendMessage(sender, message) {
-        let messageElement = document.createElement('p');
-        messageElement.textContent = message;
-        messageElement.className = sender === 'user' ? 'user-message' : 'bot-message';
-        chatBody.appendChild(messageElement);
-        chatBody.scrollTop = chatBody.scrollHeight;
-    }
+    const messageWrapper = document.createElement('div');
+    messageWrapper.className = `chat-message ${sender}`;
+
+    const profileIcon = document.createElement('img');
+    profileIcon.className = 'profile-icon';
+    profileIcon.src = sender === 'user' ? 'icons/icons8-user-40.png' : 'icons/icons8-bot-64.png';
+    profileIcon.alt = sender === 'user' ? 'User' : 'Bot';
+
+    const messageElement = document.createElement('p');
+    messageElement.textContent = message;
+    messageElement.className = sender === 'user' ? 'user-message' : 'bot-message';
+
+    messageWrapper.appendChild(profileIcon);
+    messageWrapper.appendChild(messageElement);
+
+    const chatBody = document.querySelector('.chat-body');
+    chatBody.appendChild(messageWrapper);
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
     function getBotResponse(userMessage) {
         let lowerMessage = userMessage.toLowerCase();
         if (lowerMessage.includes('hello')) {
