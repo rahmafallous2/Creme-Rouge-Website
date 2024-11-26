@@ -349,12 +349,14 @@ h1 {
     margin: 5em 200px;
     padding: 30px;
 }
-.scroll_down{
+
+.scroll_down {
     text-align: center;
     color: #fb5817;
     transition: .8s ease-in-out;
 }
-.scroll_down:hover{
+
+.scroll_down:hover {
     font-size: 2em;
 }
 
@@ -377,7 +379,7 @@ h1 {
 }
 
 .card img {
-    width: 75%;
+    height: 25vh;
 }
 
 .card img:hover {
@@ -404,6 +406,11 @@ h1 {
     color: #84121b;
 }
 
+.hidden_cards {
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
 .span_button span {
     font-size: 1.3em;
     color: #d83a47;
@@ -415,4 +422,36 @@ h1 {
     background-color: #FAF7F0;
     color: #84121b;
     border: #84121b solid 0.5px;
+    transition: 0.8s ease-in-out;
+
+}
+
+.span_button button:hover {
+    background-color: #84121b;
+    color: #f5f5dc;
+    transition: 0.8s ease-in-out;
+}
+
+.button_view_all {
+    text-align: right;
+}
+
+#view_all {
+    width: 15%;
+    background-color: #84121b;
+    color: #f5f5dc;
+    border: #0b0808 1px solid;
+    padding: 8px;
+    border-radius: 20px;
+    transition: 0.8s ease-in-out;
+    font-size: 0.7em;
+}
+
+#view_all:hover {
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    background-color: #c71414;
+    color: #f5f5dc;
+    border-radius: 20px;
 }
