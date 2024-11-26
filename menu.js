@@ -1,12 +1,10 @@
 $(document).ready(function () {
-    $('#view_all').on('click', function () {
-        let hidden = $('.hidden_cards');
-        if (hidden.css('display') === 'flex') {
-            hidden.css('display', 'none');
-            $(this).text('View All'); 
-        } else {
-            hidden.css('display', 'flex');
-            $(this).text('Back');
-        }
+    $("#view_all").on('click', function () {
+       $(".contact_icons").toggle();
+       $(".categories_menu").toggleClass('column_categoties');
+       $('.main_menu').toggleClass('main_column');
+       $('.hidden_cards').toggle();
+       $('.cards').toggleClass('center_cards');
+       $(this).text($(this).text() === 'View All' ? 'Back' : 'View ALL');
     });
-})
+});

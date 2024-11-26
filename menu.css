@@ -82,15 +82,11 @@ header .logo img {
 }
 
 .header_icons img {
-    transition: 0.6s ease-out;
+    transition: 0.9s ease-out;
 }
 
 .header_icons img:hover {
     transform: scale(1.2);
-    transition: 0.6s ease-in;
-    background-color: #000000;
-    padding: 3px;
-    border-radius: 30px;
 }
 
 .footer {
@@ -406,11 +402,6 @@ h1 {
     color: #84121b;
 }
 
-.hidden_cards {
-    display: none;
-    transition: opacity 0.3s ease;
-}
-
 .span_button span {
     font-size: 1.3em;
     color: #d83a47;
@@ -454,4 +445,28 @@ h1 {
     background-color: #c71414;
     color: #f5f5dc;
     border-radius: 20px;
+}
+
+/*on click view all*/
+.column_categoties {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 13em;
+    margin: 40px 0;
+    padding: 0;
+}
+
+.hidden_cards {
+    display: none;
+    transition: 1.5s ease-in-out;
+}
+
+.center_cards{
+    margin: 0;
+}
+.main_column{
+    display: flex;
+    flex-direction: column;
 }
