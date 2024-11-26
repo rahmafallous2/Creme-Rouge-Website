@@ -344,6 +344,7 @@ h1 {
     gap: 2em;
     margin: 5em 200px;
     padding: 30px;
+    flex-wrap: wrap;
 }
 
 .scroll_down {
@@ -365,21 +366,23 @@ h1 {
 }
 
 .card {
-    width: auto;
-    height: 50%;
+    width: 30%;
+    height: 55vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 13px;
+    margin: 10px;
     border-radius: 12px;
+    background-color: rgb(233, 231, 231);
 }
-
 .card img {
     height: 25vh;
+    transition: 0.6s ease-in-out;
 }
 
 .card img:hover {
-    transition: 0.6s ease-in;
+    transform: scale(1.1);
 }
 
 .span_button {
@@ -389,7 +392,11 @@ h1 {
     padding: 4px;
     margin: 10px 0;
 }
-
+#text_section{
+    width: auto;
+    height: 20vh;
+    margin-top: auto;
+}
 .card h2 {
     margin-top: 0;
     margin-bottom: 10px;
@@ -453,6 +460,7 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    transform: scale(1.1);
     gap: 13em;
     margin: 40px 0;
     padding: 0;
@@ -463,10 +471,22 @@ h1 {
     transition: 1.5s ease-in-out;
 }
 
-.center_cards{
+.center_cards {
     margin: 0;
 }
-.main_column{
+
+.main_column {
     display: flex;
     flex-direction: column;
+}
+/*sale icon*/
+.sale_icon{
+    width: 100%;
+    height: 5vh;
+    text-align: end;
+    margin: 0;
+}
+.sale_icon img{
+    height: 7vh;
+    position: sticky;
 }
