@@ -13,6 +13,13 @@ body {
 }
 
 header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #FAF7F0;
+}
+
+.header_child {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -271,15 +278,16 @@ h1 {
 .main_menu {
     display: flex;
     flex-direction: row;
+    margin-top: 70px;
 }
 
 .categories_menu {
+    position: fixed;
     display: flex;
     flex-direction: column;
-    gap: 2.2em;
-    left: 20px;
+    gap: 1.5em;
     margin: 40px 0;
-    margin-left: 20px;
+    margin-left: 8px;
 }
 
 .categories_menu img {
@@ -309,14 +317,14 @@ h1 {
 }
 
 .contact_icons {
+    position: fixed;
     display: flex;
     flex-direction: column;
-    gap: 12em;
+    gap: 3em;
     right: 20px;
-    margin: 40px 0;
-    margin-right: 20px;
+    margin: 275px 0;
     cursor: pointer;
-    transition: 1.2s;
+    transform: scale(1.1);
 }
 
 .contact_icons img {
@@ -331,53 +339,44 @@ h1 {
     transition: 0.5s ease-in;
 }
 
-.contact_icons .child_contact_icons {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-}
-
 .cards {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     gap: 2em;
-    margin: 5em 200px;
-    padding: 30px;
+    padding: 90px;
     flex-wrap: wrap;
-}
-
-.scroll_down {
-    text-align: center;
-    color: #fb5817;
-    transition: .8s ease-in-out;
-}
-
-.scroll_down:hover {
-    font-size: 2em;
+    height: auto;
 }
 
 .child_cards {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    margin-right: 30px;
+    margin-left: 10px;
     width: 100%;
     height: auto;
 }
 
 .card {
     width: 30%;
-    height: 55vh;
+    height: 52vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: 0.8em;
     align-items: center;
     padding: 13px;
-    margin: 10px;
+    margin: 4px;
     border-radius: 12px;
     background-color: rgb(233, 231, 231);
+    border: solid rgb(217, 205, 205);
 }
+
 .card img {
-    height: 25vh;
+    height: 20vh;
     transition: 0.6s ease-in-out;
 }
 
@@ -385,18 +384,29 @@ h1 {
     transform: scale(1.1);
 }
 
+.card .card_icons {
+    margin-top: 3px;
+}
+
+.card .text_section {
+    margin-top: -2px;
+}
+
 .span_button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 4px;
     margin: 10px 0;
 }
-#text_section{
+
+#text_section {
     width: auto;
     height: 20vh;
     margin-top: auto;
 }
+
 .card h2 {
     margin-top: 0;
     margin-bottom: 10px;
@@ -410,18 +420,16 @@ h1 {
 }
 
 .span_button span {
-    font-size: 1.3em;
+    font-size: 1em;
     color: #d83a47;
 }
 
 .span_button button {
     padding: 5px;
-    font-size: 1em;
     background-color: #FAF7F0;
     color: #84121b;
     border: #84121b solid 0.5px;
     transition: 0.8s ease-in-out;
-
 }
 
 .span_button button:hover {
@@ -430,63 +438,28 @@ h1 {
     transition: 0.8s ease-in-out;
 }
 
-.button_view_all {
-    text-align: right;
-}
-
-#view_all {
-    width: 15%;
-    background-color: #84121b;
-    color: #f5f5dc;
-    border: #0b0808 1px solid;
-    padding: 8px;
-    border-radius: 20px;
-    transition: 0.8s ease-in-out;
-    font-size: 0.7em;
-}
-
-#view_all:hover {
-    padding: 10px 15px;
-    border-radius: 20px;
-    font-size: 0.9em;
-    background-color: #c71414;
-    color: #f5f5dc;
-    border-radius: 20px;
-}
-
-/*on click view all*/
-.column_categoties {
+/*card icon*/
+.wishlist {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    transform: scale(1.1);
-    gap: 13em;
-    margin: 40px 0;
-    padding: 0;
-}
-
-.hidden_cards {
-    display: none;
-    transition: 1.5s ease-in-out;
-}
-
-.center_cards {
-    margin: 0;
-}
-
-.main_column {
-    display: flex;
-    flex-direction: column;
-}
-/*sale icon*/
-.sale_icon{
+    justify-content: end;
+    height: auto;
     width: 100%;
-    height: 5vh;
-    text-align: end;
-    margin: 0;
 }
-.sale_icon img{
-    height: 7vh;
-    position: sticky;
+.card .wishlist img:hover {
+    transform:none;
+}
+
+.wishlist img {
+    height: 4vh;
+}
+ .wishlist img {
+    height: 4.8vh;
+}
+
+.wishlist_black {
+    display: flex;
+}
+
+.wishlist_red {
+    display: none;
 }
