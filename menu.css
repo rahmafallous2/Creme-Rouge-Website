@@ -445,14 +445,16 @@ h1 {
     height: auto;
     width: 100%;
 }
+
 .card .wishlist img:hover {
-    transform:none;
+    transform: none;
 }
 
 .wishlist img {
     height: 4vh;
 }
- .wishlist img {
+
+.wishlist img {
     height: 4.8vh;
 }
 
@@ -462,4 +464,29 @@ h1 {
 
 .wishlist_red {
     display: none;
+}
+
+/*scroll down*/
+/* Scroll Up Button Styling */
+#scroll-up-btn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+#scroll-up-btn:hover {
+    background-color: #0056b3;
 }
