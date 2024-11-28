@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="details.css">
+</head>
+<body>
+    <div class="product-card">
+        <a href="menu.html"> <img id="back" src="icons/arrow (1).png" alt="" width="25px"></a>
+       
+        <div class="product-image">
+            <img id="productImage" src="" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h1 id="productName"></h1>
+            <p class="price">
+                <span id="originalPrice"></span> 
+            </p>
+            <p class="description" id="productDescription"></p>
+
+            <div class="quantity">
+                <label for="quantityInput">Quantity:</label>
+                <div class="quantity-selector">
+                    <button class="quantity-btn" id="decreaseBtn">-</button>
+                    <span id="quantityDisplay">1</span>
+                    <button class="quantity-btn" id="increaseBtn">+</button>
+                </div>
+            </div>
+
+            <div class="sizes">
+                <label for="sizes">Available Sizes:</label>
+                <div class="size-options">
+                    <button>Small</button>
+                    <button>Medium</button>
+                    <button>Large</button>
+                </div>
+            </div>
+          
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    
+    </div>
+    <footer>
+        <div class="share">
+            <img src="icons/instagram.png" alt="Instagram">
+            <img src="icons/facebook.png" alt="Facebook">
+            <img src="icons/twitter.png" alt="Twitter">
+        </div>
+
+
+    </footer>
+
+    <script>
+        const product = JSON.parse(localStorage.getItem("selectedProduct"));
+
+        if (product) {
+            document.getElementById("productImage").src = product.image;
+            document.getElementById("productName").textContent = product.name;
+            document.getElementById("originalPrice").textContent = product.originalPrice;
+            document.getElementById("productDescription").textContent = product.description;
+        } else {
+            document.body.innerHTML = "<h1>No product selected!</h1>";
+        }
+
+
+        const quantityDisplay = document.getElementById("quantityDisplay");
+        const increaseBtn = document.getElementById("increaseBtn");
+        const decreaseBtn = document.getElementById("decreaseBtn");
+
+        let quantity = 1;
+
+        increaseBtn.addEventListener("click", () => {
+        quantity++;
+        quantityDisplay.textContent = quantity; 
+        });
+
+       decreaseBtn.addEventListener("click", () => {
+        if (quantity > 1) {
+        quantity--;
+        quantityDisplay.textContent = quantity;
+        }
+       });
+
+    </script>
+</body>
+</html>
