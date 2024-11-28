@@ -1,43 +1,57 @@
 $(document).ready(function () {
-    // Category filter through category menu
+    // Menu category filtering
     $('.categories_menu > div').on('click', function () {
         const category = $(this).find('span').text().toLowerCase();
         filterCards(category);
     });
 
-    // Dropdown filter
+    // Dropdown category filtering
     $('.dropdown-content a').on('click', function (event) {
-        event.preventDefault(); // Prevent the default anchor click behavior
-        const drop = $(this).parent().data('category'); // Get the category from the parent div
-        filterCards(drop);
+        event.preventDefault(); // Prevent default behavior
+        const category = $(this).parent().data('category');
+        filterCards(category);
     });
 
-    // Common filter function for both menu and dropdown
+    // Common filter logic
     function filterCards(category) {
         if (category === 'all') {
             $('.card').show(); // Show all cards
         } else {
             $('.card').hide(); // Hide all cards
-            $('.card[data-category="' + category + '"]').show(); // Show only selected category cards
+            $('.card[data-category="' + category + '"]').show(); // Show filtered cards
         }
     }
 
-    // Wishlist toggle feature
+    // Wishlist toggle functionality
     $('.wishlist').on('click', function () {
+        const index = $(this).find('.wishlist_black').data('index');
+        const productName = $(this).siblings('.text_section').find('h2').text();
+        const productImage = $(this).siblings('img').attr('src');
+        const productPrice = $(this).siblings('.text_section').find('.span_button span').text();
+
         $(this).find('.wishlist_black').toggle();
         $(this).find('.wishlist_red').toggle();
+
+        // Save to local storage
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        if ($(this).find('.wishlist_red').is(':visible')) {
+            wishlist.push({ name: productName, image: productImage, price: productPrice });
+        } else {
+            wishlist = wishlist.filter(item => item.name !== productName);
+        }
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
     });
 
-    // Scroll Up Button Feature
-    $(window).on("scroll", function () {
+    // Scroll to top button
+    $(window).on('scroll', function () {
         if ($(this).scrollTop() > 200) {
-            $("#scroll-up-btn").fadeIn(); // Show button when scrolling down
+            $('#scroll-up-btn').fadeIn();
         } else {
-            $("#scroll-up-btn").fadeOut(); // Hide button when near the top
+            $('#scroll-up-btn').fadeOut();
         }
     });
 
-    $("#scroll-up-btn").on("click", function () {
-        $("html, body").animate({ scrollTop: 0 }, 500); // Smooth scroll to top
+    $('#scroll-up-btn').on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 500);
     });
 });
