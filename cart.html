@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Crème Rouge</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <header>
+        <div class="icon">
+            <img src="icons/logo.png" alt="Bakery_logo" width="150px">
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <a href="menu.html">Menu</a>
+                <div class="dropdown-content">
+                    <a href="">All</a>
+                    <a href="">Donuts</a>
+                    <a href="">Cookies</a>
+                    <a href="">Cakes</a>
+                    <a href="">Macaroons</a>
+                    <a href="">Cupcakes</a>
+                </div>
+            </div>
+            <a href="special_events.html">Special Events</a>
+            <a href="about_us.html">About Us</a>
+        </nav>
+        <div class="header_icons">
+            <img src="icons/heart_icon.png" alt="wishlist" width="30px">
+            <a href="cart.html"><img src="icons/cart.png" alt="cart" width="30px"></a>
+            <span>0</span>
+        </div>
+    
+    </header>
+    <div class="big-container">
+        <div class="cart-container">
+            <h2>Your Shopping Cart</h2>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    
+                </tbody>
+            </table>
+           
+        </div>
+    
+        <div class="cart-summary">
+            <h2>Order Summary</h2>
+            <p>Subtotal: $<span id="subtotal">0.00</span></p>
+            <p>Tax: $<span id="tax">0.00</span></p>
+            <p><strong>Total: $<span id="total">0.00</span></strong></p>
+            <button id="checkout-btn">Proceed to Checkout</button>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <a href="#"> <img src="icons/Creme_Rouge_Beige_Font_Smooth1.png"  alt="logo" class="footer-logo"></a>
+                <p>Where every treat is crafted with love and sweetness to bring joy to your day.</p>
+                <div class="footer-icons">
+                    <a href="#"><img src="icons/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="icons/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="icons/twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact</h2>
+                <p>Address: 123, Sugar Lane, Sweetville, CA, USA</p>
+                <p>Email: <a href="mailto:hello@sweettreatsbakery.com">hello@sweettreatsbakery.com</a></p>
+                <p>Phone: <a href="tel:+11234567890">(123) 456-7890</a></p>
+                
+            </div>
+            <div class="footer-section links">
+                <div>
+                    <h2>Help</h2>
+                    <a href="customer-service.html">Customer Service</a>
+                </div>
+            
+            </div>
+            <div class="about">
+                <h2><a href="about_us.html">About Us</a></h2>
+            </div>
+            <div class="footer-section subscribe">
+                <h2>Sign up for Our Recipe of the Day!</h2>
+                <p>Enter your email to receive our daily featured recipe and baking tips.</p>
+                <input type="email" id="email_input" placeholder="Enter your Email">
+                <button class="subscribe-button">Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Crème Rouge Bakery. <a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            // Retrieve the cart from localStorage
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartTable = $('#cart-items');
+            let subtotal = 0;
+
+            // Check if the cart is empty
+            if (cartItems.length === 0) {
+                cartTable.append('<tr><td colspan="5">Your cart is empty!</td></tr>');
+            } else {
+                // Loop through cart items and create rows
+                cartItems.forEach((item, index) => {
+                    const row = `
+                    <tr data-index="${index}">
+                        <td><img src="${item.image}" width="50" height="50"></td>
+                        <td>${item.name}</td>
+                        <td>
+                            <input type="number" class="quantity-input" value="${item.quantity}" min="1" data-index="${index}">
+                        </td>
+                        <td>$${item.totalPrice.toFixed(2)}</td>
+                        <td><button class="remove-item" data-index="${index}">Remove</button></td>
+                    </tr>`;
+                    cartTable.append(row);
+                    subtotal += item.totalPrice;
+                });
+            }
+
+            const tax = subtotal * 0.08;
+            const total = subtotal + tax;
+
+            $('#subtotal').text(subtotal.toFixed(2));
+            $('#tax').text(tax.toFixed(2));
+            $('#total').text(total.toFixed(2));
+
+            $('.quantity-input').on('input', function () {
+                const index = $(this).data('index');
+                const newQuantity = parseInt($(this).val());
+                const updatedCart = JSON.parse(localStorage.getItem('cart')) || [];
+                
+                if (newQuantity < 1) return;
+                updatedCart[index].quantity = newQuantity;
+                updatedCart[index].totalPrice = updatedCart[index].price * newQuantity;
+                localStorage.setItem('cart', JSON.stringify(updatedCart));
+
+                updateCartSummary(updatedCart);
+            });
+            $('.remove-item').on('click', function () {
+                const index = $(this).data('index');
+                const updatedCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                updatedCart.splice(index, 1);
+
+                localStorage.setItem('cart', JSON.stringify(updatedCart));
+                location.reload();
+            });
+
+            function updateCartSummary(cart) {
+                let subtotal = 0;
+                cart.forEach(item => subtotal += item.totalPrice);
+
+                const tax = subtotal * 0.08;
+                const total = subtotal + tax;
+
+                $('#subtotal').text(subtotal.toFixed(2));
+                $('#tax').text(tax.toFixed(2));
+                $('#total').text(total.toFixed(2));
+            }
+        });
+    </script>
+   
+           
+    
+</body>
+</html>

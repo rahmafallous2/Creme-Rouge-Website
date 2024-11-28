@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 header {
     display: flex;
@@ -27,7 +26,7 @@ header {
     color:#A00412;
     padding: 8px 15px;
     transition: color 0.3s ease;
-    margin: 0 10px;
+    margin: 0 15px;
     font-size: 20px;
     display: flex;
 }
@@ -66,246 +65,94 @@ header {
     gap: 7px;
     margin-right: 70px;
     transition: transform 0.3s;
+    position: relative;
+}
+.header_icons span{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: #A00412;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50% ;
+    position: absolute;
+    top: 50%;
+    font-size: 15px;
+    right: -10px;
 }
 .header_icons img:hover {
     transform: scale(1.2);
 }
-
-body {
-    background-color: #fdf8f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-.head {
-    text-align: center;
-    background-color:#A00412;
-    padding: 20px;
-    border-bottom: 4px solid #fffbf6;
-}
-
-.head h1 {
-    font-size: 2rem;
-    color: #fdf9fa;
-}
-
-.head p {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #fdf9fa;
-}
-
-.container {
+.big-container{
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    gap: 20px;
-    flex-wrap: wrap;
 }
-.contact-form {
-    flex: 1 1 50%;
-    padding: 20px;
+.cart-container {
+    width: 80%;
+    margin: 20px auto;
     background: #fff;
-    border: 2px solid #A00412;
-    height: 100%;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding:  5px 20px;
 }
-
-.contact-form h2 {
-    margin-bottom: 20px;
+.cart-container h2{
+    text-align: center;
     color: #A00412;
-}
-
-.contact-form label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-label{
-    color: #A00412;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-    width: 100%;
-    margin-top: 5px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-   
-}
-
-.contact-form button {
-    margin-top: 20px;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background-color: #A00412;
-    color: #fff;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background-color: #aa2d37;
-}
-
-.faq-section {
-    flex-wrap: wrap;
-    margin-bottom: 20px;
     padding: 20px;
-    background-color: #A00412;
-    border: 2px solid #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.faq-section h2 {
-    color: #fff;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 1.8rem;
-}
-
-.faq-item {
-    margin-bottom: 10px;
-}
-
-.faq-question {
+.cart-table {
     width: 100%;
-    background-color:#fff;
-    color: #A00412;
-    text-align: left;
-    padding: 10px;
-    font-size: 1rem;
-    font-weight: bold;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.faq-question:hover {
-    background-color: #a71d28;
-    color: #f5f5dc;
-}
-
-.faq-answer {
-    display: none;
     padding: 10px;
-    margin-top: 5px;
-    background-color: #fffbf6;
-    color: #333;
-    border-left: 3px solid #A00412;
-    border-radius: 0 5px 5px 5px;
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-
-
-.chat-box {
-    flex: 1 1 30%;
-    display: flex;
-    flex-direction: column;
-    height: 400px;
-    background: #fffbf6;
-    border: 2px solid #A00412;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.chat-header {
-    background: #A00412;
-    color: white;
     text-align: center;
-    padding: 10px;
-    font-size: 1.2rem;
 }
 
-.chat-message {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
+.cart-table th {
+    background: #A00412;
+    color: #fff;
+    font-weight: bold;
 }
-.chat-message.bot {
-    justify-content: flex-start;
-    flex-direction: row;
-}
-.chat-message.user {
-    justify-content: flex-end;
-    flex-direction: row-reverse;
-   
+
+.cart-summary {
+    width: 30%;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding:  5px 20px;
     
 }
-.bot-message {
-    background: #ffebe2;
-    color: #333;
-    align-self: flex-start;
+
+.cart-summary h2{
+    text-align: center;
+    color: #A00412;
+}
+.cart-summary p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color:black;
 }
 
-.user-message {
-    background: #ffc1a1;
-    color: #333;
-    align-self: flex-end;
-}
-.profile-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 0 10px;
-    object-fit: cover;
-}
-.bot-message, .user-message {
-    background: #ffebe2;
-    color: #333;
-    padding: 8px;
-    border-radius: 8px;
-    max-width: 70%;
-    line-height: 1.5;
-}
-
-.user-message {
-    background: #ffc1a1;
-}
-.chat-body {
-    flex: 1;
-    padding: 10px;
-    overflow-y: auto;
-    background: white;
-    border-top: 1px solid #A00412;
-}
-
-.chat-footer {
-    display: flex;
-    border-top: 1px solid #A00412;
-}
-
-.chat-footer input {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    outline: none;
-    border-radius: 0 0 0 8px;
-}
-
-.chat-footer button {
-    padding: 10px;
-    border: none;
+#checkout-btn {
     background: #A00412;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    align-items: right;
     cursor: pointer;
-    border-radius: 0 0 8px 0;
 }
 
-.chat-footer button:hover {
+#checkout-btn:hover {
     background: #d53946;
 }
-
-
 .footer {
     background-color: #A00412; 
     color: #f5f5dc; 
@@ -335,7 +182,9 @@ label{
     max-width: 120px; 
     margin-bottom: 0; 
 }
-
+html {
+    scroll-behavior: smooth;
+}
 .footer-section p {
     font-size: 0.8em; 
     line-height: 1.2;
@@ -440,4 +289,8 @@ label{
 .footer-content button:hover {
     background-color: #A00412;
     color: #fff;
+}
+.div_1 button,.div_4 button, .footer-content button {
+    z-index: 10; 
+    position: relative;
 }
