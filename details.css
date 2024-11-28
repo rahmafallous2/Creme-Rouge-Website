@@ -1,0 +1,163 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #a00412;
+
+  padding: 20px;
+}
+
+.product-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(218, 97, 97, 0.1);
+  overflow: hidden;
+  max-width: 1000px;
+  height: 500px;
+  margin: auto;
+  margin-top: 20px;
+}
+#back{
+  position: absolute;
+  top: 50px;
+  padding: 10px;
+}
+
+.product-image {
+  flex: 1;
+  max-width: 400px;
+  border-right: 1px solid beige;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+}
+
+.product-details {
+  padding: 20px;
+  flex: 2;
+}
+
+.product-details h1 {
+  color: #a00412;
+  
+  font-size: 1.8em;
+  margin: 0 0 10px;
+}
+
+.product-details .price {
+  color: #a00412;
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.product-details .description {
+  color: #a00412;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 10px 0 20px;
+}
+.quantity {
+  margin: 20px 0;
+}
+
+.quantity label {
+  color: #a00412;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+ .quantity-btn {
+  background-color: #a00412;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  width: 30px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+.quantity-btn:hover {
+  background-color: #a00412;
+  color: #fff;
+}
+
+.quantity-selector span {
+  width: 50px;
+  text-align: center;
+  border: 1px solid beige;
+  border-radius: 5px;
+  font-size: 1em;
+  padding: 5px;
+  
+}
+
+
+.sizes label {
+  color: #a00412;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.size-options {
+  display: flex;
+  gap: 10px;
+}
+
+.size-options button {
+  background-color: #a00412;
+  color: #fff;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.size-options button:hover {
+  background-color: #c76870;
+  color: #fff;
+}
+.share{
+  display: flex;
+  align-items: center;
+  margin-left: 600px;
+}
+.share img{
+  width: 20px;
+  margin: 5px;
+  padding: 10px;
+  transition: transform 0.3s;
+}
+.share img:hover {
+  transform: scale(1.2);
+}
+
+
+.add-to-cart {
+  background-color: #a00412;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 500px;
+}
+
+.add-to-cart:hover {
+  background-color: #ba4851;
+  color: #fff;
+}
