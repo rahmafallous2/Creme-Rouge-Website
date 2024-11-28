@@ -84,16 +84,25 @@ header {
     height: auto;
     border-radius: 15px;
 }
+.review-video{
+    flex: 1;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
 .Customers h2 {
-    font-size: 2rem;
+    font-size: 36px;
     margin-bottom: 20px;
     color: #f9f9f9;
+    text-align: center;
 }
 .Customers p {
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin-bottom: 10px;
     color: #f9f9f9;
     line-height: 1.4;
+    text-align: center;
 }
 .why_us{
     padding: 30px;
@@ -101,11 +110,6 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-/* .why_us:hover{
-    background-image: url(icons/why\ us\ 2.png);
-    background-color: transparent;
-} */
 .both_us{
     display: flex;
     justify-content: space-between;
