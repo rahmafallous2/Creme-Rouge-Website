@@ -31,6 +31,10 @@
             <a href="special_events.html">Special Events</a>
             <a href="about_us.html">About Us</a>
         </nav>
+          <!-- Hamburger Menu Icon -->
+    <button class="hamburger-menu" id="hamburger-menu">
+        &#9776; <!-- Hamburger icon -->
+    </button>
         <div class="header_icons">
             <img src="icons/cart.png" alt="cart" width="30px">
             <img src="icons/heart_icon.png" alt="wishlist" width="30px">
@@ -185,6 +189,14 @@
             <p>&copy; 2024 Crème Rouge Bakery. <a href="privacy-policy.html">Privacy Policy</a></p>
         </div>
     </footer>
+    <script>// JavaScript for hamburger menu toggle
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navbar = document.querySelector('.navbar');
+        
+        hamburgerMenu.addEventListener('click', function() {
+            navbar.classList.toggle('active'); // Toggle 'active' class on the navbar
+        });
+        </script>
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

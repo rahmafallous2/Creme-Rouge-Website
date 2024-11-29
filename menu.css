@@ -10,6 +10,7 @@ html {
 
 body {
     background-color: #FAF7F0;
+    font-family: 'Arial', sans-serif;
 }
 
 header {
@@ -266,7 +267,7 @@ footer {
     position: relative;
 }
 
-main menu style/
+/*main menu style*/
 h1 {
     color: #f5f5dc;
     background-color: #A00412;
@@ -286,12 +287,23 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
-    margin: 40px 0;
+    margin: 60px 0;
     margin-left: 8px;
+    opacity: 0;
+    transform: translate3d(20px);
+    animation: fadeIn 0.9s ease forwards;
+}
+
+/* Keyframes for Fade-In Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .categories_menu img {
-    height: 6vh;
+    height: 5.7vh;
     width: auto;
 }
 
@@ -316,28 +328,6 @@ h1 {
     transition: 0.5s ease-in-out;
 }
 
-.contact_icons {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    gap: 3em;
-    right: 20px;
-    margin: 275px 0;
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.contact_icons img {
-    height: 3vh;
-    width: auto;
-    transition: 0.5s ease-out;
-}
-
-.contact_icons img:hover {
-    height: 5vh;
-    width: auto;
-    transition: 0.5s ease-in;
-}
 
 .cards {
     display: flex;
@@ -347,6 +337,7 @@ h1 {
     width: 100%;
     gap: 2em;
     padding: 90px;
+    margin-top: -30px;
     flex-wrap: wrap;
     height: auto;
 }
@@ -361,8 +352,8 @@ h1 {
 }
 
 .card {
-    width: 30%;
-    height: 52vh;
+    width: 20%;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -371,10 +362,13 @@ h1 {
     padding: 13px;
     margin: 4px;
     border-radius: 12px;
-    background-color: rgb(233, 231, 231);
-    border: solid rgb(217, 205, 205);
+    background: #FFF5E6;
+    border: 1px solid #D9CDCD;
 }
-
+.card:hover{
+     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
 .card img {
     height: 20vh;
     transition: 0.6s ease-in-out;
@@ -402,8 +396,8 @@ h1 {
 }
 
 #text_section {
-    width: auto;
-    height: 20vh;
+    width: 100%;
+    height: 0vh;
     margin-top: auto;
 }
 
@@ -411,47 +405,49 @@ h1 {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1em;
-    color: #e34343;
+    color: #A00412;
 }
 
 .card p {
+    width: 100%;
+    height: 10vh;
     font-size: 0.8em;
     color: #84121b;
 }
 
 .span_button span {
     font-size: 1em;
-    color: #d83a47;
+    color: #ba2e39;
 }
 
 .span_button button {
     padding: 5px;
-    background-color: #FAF7F0;
-    color: #84121b;
-    border: #84121b solid 0.5px;
-    transition: 0.8s ease-in-out;
+    background-color: #A00412;
+    border: #ba2e39;
+    color: #FFF5E6;
+    border-radius: 8px;
+    transition: background-color 0.3s;
 }
 
 .span_button button:hover {
-    background-color: #84121b;
+    background-color: #84121B;
     color: #f5f5dc;
     transition: 0.8s ease-in-out;
 }
 
+/*card icon*/
 .wishlist {
     display: flex;
     justify-content: end;
     height: auto;
     width: 100%;
 }
+
 .card .wishlist img:hover {
-    transform:none;
+    transform: none;
 }
 
 .wishlist img {
-    height: 4vh;
-}
- .wishlist img {
     height: 4.8vh;
 }
 
@@ -464,25 +460,138 @@ h1 {
 }
 
 
-
+/* Scroll Up Button Styling */
 #scroll-up-btn {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    outline: none;
-    padding: 10px 15px;
+    background-color: #FFF5E6;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 18px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border: #c8b8a0 solid;
     transition: opacity 0.3s ease, background-color 0.3s ease;
 }
 
+#scroll-up-btn img {
+    padding: 8px 10px;
+    height: 6.5vh;
+}
+
 #scroll-up-btn:hover {
-    background-color: #0056b3;
+    background-color: #f1e3cd;
+}
+
+/* Existing CSS... */
+@media (max-width: 1560px) {
+    .card {
+        width: 22%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .categories_menu {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: center;
+    }
+
+    .card {
+        width: 23%;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .child_cards {
+        flex-wrap: wrap;
+    }
+
+    .categories_menu {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .card {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .categories_menu {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 0.8em;
+        justify-content: center;
+    }
+
+    .categories_menu div {
+        flex: 0 0 calc(33.33% - 10px);
+        text-align: center;
+    }
+
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .categories_menu div {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 320px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .categories_menu div {
+        flex: 1 1 100%;
+        font-size: 0.8em;
+    }
+
+    .card h2 {
+        font-size: 1em;
+    }
+
+    .card p {
+        font-size: 0.8em;
+    }
 }

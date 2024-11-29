@@ -4,6 +4,31 @@ body {
 
   padding: 20px;
 }
+.header_icons{
+  position: absolute;
+  top: 50px;
+  padding: 10px;
+  margin-left: 920px;
+ 
+}
+.header_icons span{
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background-color: #A00412;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50% ;
+  position: absolute;
+  top: 50%;
+  font-size: 15px;
+  right: -1px;
+}
+.header_icons img:hover {
+  transform: scale(1.2);
+}
 
 .product-card {
   display: flex;
@@ -145,7 +170,7 @@ body {
 }
 
 
-.add-to-cart {
+.addtocart {
   background-color: #a00412;
   border: none;
   color: #fff;
@@ -157,7 +182,132 @@ body {
   margin-left: 500px;
 }
 
-.add-to-cart:hover {
+.addtocart:hover {
   background-color: #ba4851;
   color: #fff;
+}
+/* Default styling is for desktop view */
+
+/* For tablets (768px and below) */
+@media screen and (max-width: 1000px) {
+  body {
+    padding: 10px;
+  }
+
+  .header_icons {
+    top: 40px;
+    right: 25px;
+    gap: 5px;
+    margin-right: 40px;
+  }
+
+  #back {
+    top: 40px;
+    left: 25px;
+    margin-left: 40px;
+  }
+
+  .product-card {
+    flex-direction: column;
+    height: auto;
+    max-width: 90%;
+  }
+
+  .product-image {
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid beige;
+  }
+
+  .product-details {
+    padding: 15px;
+  }
+
+  .product-details h1 {
+    font-size: 1.5em;
+  }
+
+  .product-details .price {
+    font-size: 1.2em;
+  }
+
+  .quantity-selector span {
+    width: 40px;
+    font-size: 0.9em;
+  }
+
+  .size-options button,
+  .quantity-btn {
+    font-size: 0.9em;
+    padding: 5px;
+  }
+
+  .addtocart {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .share {
+    margin: 50px;
+    justify-content: center;
+  }
+}
+
+/* For mobile phones (480px and below) */
+@media screen and (max-width: 480px) {
+  .header_icons {
+    top: 20px;
+    right: 20px;
+    gap: 5px;
+    margin-right: 25px;
+  }
+
+  #back {
+    top: 20px;
+    left: 20px;
+    margin-left: 25px;
+  }
+
+  .product-card {
+    margin-top: 10px;
+  }
+
+  .product-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .product-details h1,
+  .product-details .price,
+  .product-details .description {
+    font-size: 1em;
+  }
+
+  .quantity-selector span {
+    width: 30px;
+    font-size: 0.8em;
+  }
+
+  .size-options button,
+  .quantity-btn {
+    font-size: 0.8em;
+    padding: 5px;
+  }
+
+  .addtocart {
+    margin-top: 15px;
+    padding: 10px;
+  }
+
+  .share {
+    flex-direction: row;
+    align-items: center;
+    margin: 10px auto;
+  }
+
+  .share img {
+    width: 25px;
+  }
 }
