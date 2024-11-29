@@ -23,9 +23,6 @@ $(document).ready(function () {
                 let card = `
                  <div class="wishlist-card" data-index="${index}">
                     <div class="wishlist-item">
-                            <div class="item-icon">
-                                 <img src="${item.icon}" alt="${item.name}" height="5vh">
-                            </div>
                         <div class="item-image">
                                 <img src="${item.image}" alt="${item.name}">
                         </div>
@@ -77,4 +74,11 @@ $(document).ready(function () {
             renderWishlist();
         });
     });
+    //hamburger menu
+
+    $('#more').click(function () {
+        $('#navbar').toggle();
+    });
+
+
 });
