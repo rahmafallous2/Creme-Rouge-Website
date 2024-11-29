@@ -462,6 +462,271 @@ html {
     z-index: 10; 
     position: relative;
 }
+/* Mobile First Approach - Adjusting for smaller screens */
+@media screen and (max-width: 768px) {
+     /* Global Reset */
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Header Styling */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .icon {
+        margin: 0;
+        border: none;
+        max-width: 50px;
+    }
+
+    .navbar {
+        padding: 15px;
+        text-align: center;
+        display: flex;
+        gap: 30px;
+        font-size: 18px; /* Adjust font size for tablets */
+    }
+
+    .navbar a {
+        padding: 6px 12px;
+        font-size: 18px;
+    }
+
+    .dropdown-content {
+        min-width: 200px; /* Dropdown width is increased slightly */
+        left: 0;
+    }
+
+
+    .reviews {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .reviews img {
+        width: 100%;
+        height: auto;
+    }
+
+    .both_us {
+        flex-direction: column;
+    }
+
+    .both_us img {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Single-column layout */
+        gap: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .container .message {
+        margin: 0;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .footer {
+        padding: 20px;
+        text-align: center; 
+        height: auto; 
+        border-radius: 15px; 
+        margin: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-section {
+        min-width: 100%; 
+        margin: 10px 0;
+    }
+
+    .footer-logo {
+        max-width: 100px; 
+    }
+
+    .footer-section p,
+    .footer-section.contact p,
+    .footer-section.links a,
+    .footer-section.subscribe p {
+        font-size: 0.7em; 
+    }
+
+    .footer-section.subscribe input[type="email"] {
+        max-width: 90%; 
+        margin: 10px auto;
+    }
+
+    .footer-icons {
+        justify-content: center;
+        gap: 15px; 
+        margin-top: 10px;
+    }
+
+    .footer-bottom {
+        font-size: 0.7em; 
+        margin-top: 20px;
+    }
+
+}
+
+/* Additional adjustments for very small screens (e.g., smartphones) */
+@media screen and (max-width: 480px) {
+   /* Global Reset */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    flex-direction: column; /* Stack the logo and navbar vertically */
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.icon {
+    margin: 0;
+    border: none;
+    max-width: 40px;
+}
+
+.navbar {
+    padding: 10px;
+    flex-direction: column; /* Stack navbar items vertically */
+    gap: 10px; /* Reduced gap for compactness */
+    font-size: 16px; /* Smaller font size for mobile */
+    margin: 0 20px;
+}
+
+.navbar a {
+    padding: 6px 10px;
+    font-size: 18px;
+}
+
+.dropdown-content {
+    min-width: 100%; /* Ensure dropdown is full width */
+    left: 0;
+}
+
+    .reviews,
+    .both_us {
+        padding: 15px;
+    }
+
+    section.member .member-card {
+        display: flex;
+        flex-direction: column; /* Stack image and text */
+        align-items: center; /* Center all elements */
+        padding: 10px; /* Add some padding */
+        gap: 8px; /* Space between elements */
+        background-color: #f9f9f9; /* Light background for the card */
+        border-radius: 10px; /* Rounded corners for a cleaner look */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        text-align: center; /* Center-align the text */
+    }
+
+    section.member .member-card img {
+        width: 100%; /* Ensure the image adapts to the container width */
+        max-width: 150px; /* Set a maximum size to keep the image manageable */
+        height: auto;
+        border-radius: 50%; /* Circular style for the image */
+        margin-bottom: 10px; /* Space below the image */
+        border: 2px solid #ddd; /* Add a border for better focus */
+    }
+
+    section.member .member-card p {
+        font-size: 1rem; /* Make the text slightly larger for readability */
+        line-height: 1.6; /* Adjust line height for better spacing */
+        color: #333; /* Darker text for contrast */
+        margin: 0; /* Remove unnecessary margin */
+        padding: 0 10px; /* Add some horizontal padding for better alignment */
+    }
+
+    section.member .member-card h3 {
+        font-size: 1.2rem; /* Slightly larger heading size */
+        color: #000; /* Use bold black for emphasis */
+        margin-bottom: 5px; /* Space below the heading */
+    }
+
+    /* Optional: Add interaction effects */
+    section.member .member-card:hover {
+        transform: translateY(-5px); /* Lift the card slightly */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
+    }
+    .footer {
+        padding: 15px;
+        text-align: center;
+        height: auto;
+        margin: 5px;
+        border-radius: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer-section {
+        width: 100%; /* Full width for smaller screens */
+        margin: 5px 0;
+    }
+
+    .footer-logo {
+        max-width: 80px; /* Smaller logo size */
+    }
+
+    .footer-section p,
+    .footer-section.contact p,
+    .footer-section.links a,
+    .footer-section.subscribe p {
+        font-size: 0.65em; /* Smaller text for compact layout */
+    }
+
+    .footer-section.subscribe input[type="email"] {
+        width: 100%; /* Full-width input field */
+        margin: 5px auto;
+        padding: 8px; /* Ensure comfortable input */
+    }
+
+    .footer-icons {
+        justify-content: center;
+        gap: 10px; /* Compact spacing between icons */
+        margin-top: 5px;
+    }
+
+    .footer-icons a {
+        font-size: 0.8em; /* Adjust icon size */
+    }
+
+    .footer-bottom {
+        font-size: 0.6em; /* Smaller font for bottom text */
+        margin-top: 15px;
+    }
+}
 
 
 

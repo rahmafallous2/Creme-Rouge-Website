@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="giftbox.css">
+    <title>GiftBox</title>
+</head>
+<body>
+    <header>
+        <div class="icon">
+            <img src="icons/logo.png" alt="Bakery_logo" width="150px">
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <a href="menu.html">Menu</a>
+                <div class="dropdown-content">
+                    <a href="">All</a>
+                    <a href="">Donuts</a>
+                    <a href="">Cookies</a>
+                    <a href="">Cakes</a>
+                    <a href="">Macaroons</a>
+                    <a href="">Cupcakes</a>
+                </div>
+            </div>
+            <a href="about_us.html"> About Us</a>
+            <a href="special_events.html">Special Events</a>
+        </nav>
+        <div class="header_icons">
+            <img src="icons/cart.png" alt="cart" width="30px">
+            <img src="icons/heart_icon.png" alt="wishlist" width="30px">
+        </div>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>Choose your design and make it special.</h1>
+        </section>
+        <section class="menu">
+            <div class="menu-item card" data-index="0">
+                <img src="icons/gift box/giftbox1.jpg" alt="Item 1 Icon" class="item-class">
+                <h2>Chocolate-Dipped Strawberries with Cherry & Raspberry -$19.99-</h2>
+                <p>Indulge in the perfect blend of sweetness and richness with this exquisite box of strawberries. Each strawberry is carefully dipped in a luxurious coating of both brown and white chocolate.</p>
+                <div class="item-actions">
+                    <div class="wishlist">
+                        <img src="icons/grey heart.png" alt="Wishlist Icon" class="wishlist_black item-icon">
+                        <img src="icons/red heart.png" alt="Wishlist Icon" class="wishlist_red item-icon" style="display: none;">
+                    </div>
+                    <div class="button">
+                        <button class="item-btn">Add to cart</button>
+                    </div>
+                    <div id="cartMessage1"></div>
+                </div>
+            </div>
+            <div class="menu-item card" data-index="1">
+                <img src="icons/gift box/giftbox2.jpg" alt="Item 2 Icon" class="item-class">
+                <h2>Donut Tree Display -$24.99-</h2>
+                <p>Delight in this fun and festive donut display shaped like a tree! Featuring a variety of colorful donuts stacked beautifully in a tree-like arrangement, this sweet centerpiece is perfect for any celebration.</p>
+                <div class="item-actions">
+                    <div class="wishlist" style="margin-bottom: -90px;">
+                        <img src="icons/grey heart.png" alt="Wishlist Icon" class="wishlist_black item-icon">
+                        <img src="icons/red heart.png" alt="Wishlist Icon" class="wishlist_red item-icon" style="display: none;">
+                    </div>
+                    <div class="button" style="margin-bottom: -90px;">
+                        <button class="item-btn">Add to cart</button>
+                    </div>
+                    <div id="cartMessage2"></div>
+                </div>
+            </div>
+            <div class="menu-item card" data-index="2">
+                <img src="icons/gift box/giftbox3.jpg" alt="Item 3 Icon" class="item-class">
+                <h2>Pink Macaroons & Cupcake Box -$30-</h2>
+                <p>This delightful box features 6 delicate pink macaroons and 6 beautifully designed cupcakes, each a sweet work of art.</p>
+                <div class="item-actions">
+                    <div class="wishlist" style="margin-bottom: -170px;">
+                        <img src="icons/grey heart.png" alt="Wishlist Icon" class="wishlist_black item-icon">
+                        <img src="icons/red heart.png" alt="Wishlist Icon" class="wishlist_red item-icon" style="display: none;">
+                    </div>
+                    <div class="button" style="margin-bottom: -170px;">
+                        <button class="item-btn">Add to cart</button>
+                    </div>
+                    <div id="cartMessage3"></div>
+                </div>
+            </div>
+            <div class="menu-item card" data-index="3">
+                <img src="icons/gift box/giftbox4.jpg" alt="Item 4 Icon" class="item-class">
+                <h2>Chocolate-Dipped Strawberries with Berries Box -$18-</h2>
+                <p>Enjoy a luxurious treat with this box of strawberries filled with rich brown and white chocolate, paired with fresh raspberries, blueberries, and blackberries.</p>
+                <div class="item-actions">
+                    <div class="wishlist" style="margin-bottom: -50px;">
+                        <img src="icons/grey heart.png" alt="Wishlist Icon" class="wishlist_black item-icon">
+                        <img src="icons/red heart.png" alt="Wishlist Icon" class="wishlist_red item-icon" style="display: none;">
+                    </div>
+                    <div class="button" style="margin-bottom: -50px;">
+                        <button class="item-btn">Add to cart</button>
+                    </div>
+                    <div id="cartMessage4"></div>
+                </div>
+            </div>
+            <div class="menu-item card" data-index="4">
+                <img src="icons/gift box/giftbox5.jpg" alt="Item 5 Icon" class="item-class">
+                <h2>Donut Bouquet -$20.99-</h2>
+                <p>A sweet and unique gift, this 12-donut bouquet is a beautiful arrangement of colorful and creatively designed donuts.</p>
+                <div class="item-actions">
+                    <div class="wishlist" style="margin-bottom: -140px;">
+                        <img src="icons/grey heart.png" alt="Wishlist Icon" class="wishlist_black item-icon">
+                        <img src="icons/red heart.png" alt="Wishlist Icon" class="wishlist_red item-icon" style="display: none;">
+                    </div>
+                    <div class="button" style="margin-bottom: -130px;">
+                        <button class="item-btn">Add to cart</button>
+                    </div>
+                    <div id="cartMessage5"></div>
+                </div>
+            </div>
+            <div class="menu-item card" data-index="5">
+                <img src="icons/gift box/giftbox6.jpg" alt="Item 6 Icon" class="item-class">
+                <h2>Assorted 6-Piece Macaroon Box -$15.5-</h2>
+                <p>Savor the delightful variety in this 6-piece macaroon box, featuring different flavors in each bite.</p>
+                <div class="item-actions">
+                    <div class="wishlist" style="margin-bottom: -130px;">
+                        <img src="icons/grey heart.png" alt="Wishlist Icon" class="wishlist_black item-icon">
+                        <img src="icons/red heart.png" alt="Wishlist Icon" class="wishlist_red item-icon" style="display: none;">
+                    </div>
+                    <div class="button" style="margin-bottom: -130px;">
+                        <button class="item-btn">Add to cart</button>
+                    </div>
+                    <div id="cartMessage6"></div>
+                </div>
+            </div>
+            <div class="menu-item card" data-index="6">
+                <img src="icons/gift box/giftbox7.jpg" alt="Item 7 Icon" class="item-class">
+                <h2>Rabbit Chocolate Smash Box -$12-</h2>
+                <p>Unleash the fun with this unique box featuring a pink chocolate rabbit, ready to be smashed with a wooden hammer!</p>
+                <div class="item-actions">
+                    <div class="wishlist" style="margin-bottom: -130px;">
+                        <img src="icons/grey heart.png" alt="Wishlist Icon" class="wishlist_black item-icon">
+                        <img src="icons/red heart.png" alt="Wishlist Icon" class="wishlist_red item-icon" style="display: none;">
+                    </div>
+                    <div class="button" style="margin-bottom: -130px;">
+                        <button class="item-btn">Add to cart</button>
+                    </div>
+                    <div id="cartMessage7"></div>
+                </div>
+            </div>
+            <div class="menu-item card" data-index="7">
+                <img src="icons/gift box/giftbox8.jpg" alt="Item 8 Icon" class="item-class">
+                <h2>Single Designed Cupcake Box -$7-</h2>
+                <p>This elegant box features a beautifully designed cupcake, crafted with intricate details and topped with delicious decorations.</p>
+                <div class="item-actions">
+                    <div class="wishlist" style="margin-bottom: -90px;">
+                        <img src="icons/grey heart.png" alt="Wishlist Icon" class="wishlist_black item-icon">
+                        <img src="icons/red heart.png" alt="Wishlist Icon" class="wishlist_red item-icon" style="display: none;">
+                    </div>
+                    <div class="button" style="margin-bottom: -90px;">
+                        <button class="item-btn">Add to cart</button>
+                    </div>
+                    <div id="cartMessage8"></div>
+                </div>
+            </div>
+            <div class="menu-item card" data-index="8">
+                <img src="icons/gift box/giftbox9.jpg" alt="Item 9 Icon" class="item-class">
+                <h2>Wrapped Cookie Set -$9.99-</h2>
+                <p>Enjoy a sweet treat with this set of 2 wrapped packs, each containing 4 delicious cookies.</p>
+                <div class="item-actions">
+                    <div class="wishlist" style="margin-bottom: -130px;">
+                        <img src="icons/grey heart.png" alt="Wishlist Icon" class="wishlist_black item-icon">
+                        <img src="icons/red heart.png" alt="Wishlist Icon" class="wishlist_red item-icon" style="display: none;">
+                    </div>
+                    <div class="button" style="margin-bottom: -130px;">
+                        <button class="item-btn">Add to cart</button>
+                    </div>
+                    <div id="cartMessage9"></div>
+                </div>
+            </div>
+            <div class="menu-item card" data-index="9">
+                <img src="icons/gift box/giftbox10.jpg" alt="Item 10 Icon" class="item-class">
+                <h2>Chocolate Donut Bouquet Box -$27.99-</h2>
+                <p>This delightful bouquet box features 12 chocolate donuts, each topped with colorful sprinkles.</p>
+                <div class="item-actions">
+                    <div class="wishlist" style="margin-bottom: -130px;">
+                        <img src="icons/grey heart.png" alt="Wishlist Icon" class="wishlist_black item-icon">
+                        <img src="icons/red heart.png" alt="Wishlist Icon" class="wishlist_red item-icon" style="display: none;">
+                    </div>
+                    <div class="button" style="margin-bottom: -130px;">
+                        <button class="item-btn">Add to cart</button>
+                    </div>
+                    <div id="cartMessage10"></div>
+                </div>
+            </div>
+            <div class="menu-item card" data-index="10">
+                <img src="icons/gift box/giftbox11.jpg" alt="Item 11 Icon" class="item-class">
+                <h2>Valentine’s White Cookies -$12.99-</h2>
+                <p>Indulge in these 4 delicious, bite-sized cookies filled with creamy white chocolate and elegantly decorated with red chocolate.</p>
+                <div class="item-actions">
+                    <div class="wishlist" style="margin-bottom: -90px;">
+                        <img src="icons/grey heart.png" alt="Wishlist Icon" class="wishlist_black item-icon">
+                        <img src="icons/red heart.png" alt="Wishlist Icon" class="wishlist_red item-icon" style="display: none;">
+                    </div>
+                    <div class="button" style="margin-bottom: -90px;">
+                        <button class="item-btn">Add to cart</button>
+                    </div>
+                    <div id="cartMessage11"></div>
+                </div>
+            </div>
+            <div class="menu-item card" data-index="11">
+                <img src="icons/gift box/giftbox12.jpg" alt="Item 12 Icon" class="item-class">
+                <h2>Elegant Chocolate Box - $35.99-</h2>
+                <p>Treat someone special to this elegant chocolate box, complete with a delightful gift from us and fresh flowers.</p>
+                <div class="item-actions">
+                    <div class="wishlist" style="margin-bottom: -130px;">
+                        <img src="icons/grey heart.png" alt="Wishlist Icon" class="wishlist_black item-icon">
+                        <img src="icons/red heart.png" alt="Wishlist Icon" class="wishlist_red item-icon" style="display: none;">
+                    </div>
+                    <div class="button" style="margin-bottom: -130px;">
+                        <button class="item-btn">Add to cart</button>
+                    </div>
+                    <div id="cartMessage12"></div>
+                </div>
+            </div>
+        </section>
+
+
+
+          <div class="custom">
+            <h1> Customize your own gift</h1>
+          </div>
+          <div class="dessert-list">
+            <div class="dessert" draggable="true" id="donut">
+                <img src="icons/Strawberrydonut.png" alt="Donut" class="dessert-img">
+            </div>
+            <div class="dessert" draggable="true" id="cupcake">
+                <img src="icons/cupcakeicon.png" alt="Cupcake" class="dessert-img">
+            </div>
+            <div class="dessert" draggable="true" id="macaron">
+                <img src="icons/macaroons.png" alt="Macaroon" class="dessert-img">
+            </div>
+            <div class="dessert" draggable="true" id="cookie">
+                <img src="icons/Biscuits_craquants_aux_brisures_de_chocolat___RICARDO-removebg-preview.png" alt="Cookie" class="dessert-img">
+            </div>
+            <div class="dessert" draggable="true" id="cake">
+                <img src="icons/iconcake.png" alt="Cake" class="dessert-img">
+            </div>
+            <div class="dessert" draggable="true" id="strawberry">
+                <img src="icons/strawberry.png" alt="Strawberry" class="dessert-img">
+            </div>
+            <div class="dessert" draggable="true" id="raspberry">
+                <img src="icons/rasberry.png" alt="Raspberry" class="dessert-img">
+            </div>
+            <div class="dessert" draggable="true" id="blueberry">
+                <img src="icons/blueberry.png" alt="Blueberry" class="dessert-img">
+            </div>
+        </div>
+
+        <div class="cart-section">
+            <div class="cart" id="cart"></div>
+            <button id="emailCart" class="send-email">Send Cart to My Email</button>
+          </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <a href="#"> <img src="icons/Creme_Rouge_Beige_Font_Smooth1.png"  alt="logo" class="footer-logo"></a>
+                <p>Where every treat is crafted with love and sweetness to bring joy to your day.</p>
+                <div class="footer-icons">
+                    <a href="#"><img src="icons/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="icons/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="icons/twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact</h2>
+                <p>Address: 123, Sugar Lane, Sweetville, CA, USA</p>
+                <p>Email: <a href="mailto:hello@sweettreatsbakery.com">hello@sweettreatsbakery.com</a></p>
+                <p>Phone: <a href="tel:+11234567890">(123) 456-7890</a></p>
+                
+            </div>
+            <div class="footer-section links">
+                <div>
+                    <h2>Help</h2>
+                    <a href="#">FAQ</a>
+                    <a href="#">Customer Service</a>
+                </div>
+            
+            </div>
+            <div class="about">
+                <h2><a href="about_us.html">About Us</a></h2>
+            </div>
+            <div class="footer-section subscribe">
+                <h2>Sign up for Our Recipe of the Day!</h2>
+                <p>Enter your email to receive our daily featured recipe and baking tips.</p>
+                <input type="email" id="email_input" placeholder="Enter your Email">
+                <button class="subscribe-button">Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Crème Rouge Bakery. <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+    <script src="giftbox.js"></script>
+</body>
+</html>
