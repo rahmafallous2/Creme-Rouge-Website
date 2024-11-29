@@ -1,7 +1,8 @@
 $(document).ready(function () {
+
     // Retrieve wishlist from local storage
-    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-    const wishlistContainer = $('#wishlist-container');
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    let wishlistContainer = $('#wishlist-container');
 
     // Function to render wishlist items
     function renderWishlist() {
@@ -19,20 +20,27 @@ $(document).ready(function () {
             });
         } else {
             wishlist.forEach((item, index) => {
-                const card = `
-                    <div class="card" data-category="wishlist" data-index="${index}">
-                        <div class="wishlist-item">
-                            <img src="${item.image}" alt="${item.name}">
-                            <div class="text_section">
-                                <h3>${item.name}</h3>
-                                <p>${item.description || 'No description available'}</p>
-                                <p><span class="price">${item.price}</span></p>
-                                <div class="remove-button" data-index="${index}">
-                                    <button>Remove</button>
-                                </div>
+                let card = `
+                 <div class="wishlist-card" data-index="${index}">
+                    <div class="wishlist-item">
+                            <div class="item-icon">
+                                 <img src="${item.icon}" alt="${item.name}" height="5vh">
                             </div>
+                        <div class="item-image">
+                                <img src="${item.image}" alt="${item.name}">
                         </div>
-                    </div>
+                        <div class="item-information">
+                            <h2 class="item-name">${item.name}</h2>
+                            <p class="item-description">${item.description || 'No description available'}</p>
+                            <p class="item-price"><span class="price">${item.price}</span></p>
+                        </div>
+                        <div class="item-actions">
+                            <button class="add-to-cart" data-index="${index}">Add to Cart</button>
+                            <button class="remove-button" data-index="${index}">Remove</button>
+                         </div>
+
+                     </div>
+                </div>
                 `;
                 wishlistContainer.append(card);
             });
@@ -42,13 +50,31 @@ $(document).ready(function () {
     // Initially render wishlist
     renderWishlist();
 
+    // Add item to cart
+    $(document).on('click', '.add-to-cart', function () {
+        const index = $(this).data('index');
+        const item = wishlist[index];
+
+        // Assuming you have a cart array, add the item to the cart (Cart functionality needs to be implemented)
+        console.log(`${item.name} added to the cart`);
+        // You can add more code here to actually add the item to a cart array or local storage
+
+        // Optional: Feedback or animation when item is added to the cart
+        alert(`${item.name} has been added to your cart.`);
+    });
+
     // Remove item from wishlist
     $(document).on('click', '.remove-button', function () {
         const index = $(this).data('index');
-        wishlist.splice(index, 1); // Remove item from array
-        localStorage.setItem('wishlist', JSON.stringify(wishlist)); // Update local storage
 
-        // Re-render the wishlist after removal
-        renderWishlist();
+        // Animate removal
+        const cardToRemove = $(this).closest('.wishlist-card');
+        cardToRemove.fadeOut(300, function () {
+            wishlist.splice(index, 1); // Remove item from array
+            localStorage.setItem('wishlist', JSON.stringify(wishlist)); // Update local storage
+
+            // Re-render the wishlist after removal
+            renderWishlist();
+        });
     });
 });
