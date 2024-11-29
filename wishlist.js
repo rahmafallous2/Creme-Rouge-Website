@@ -1,10 +1,8 @@
 $(document).ready(function () {
 
-    // Retrieve wishlist from local storage
     let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
     let wishlistContainer = $('#wishlist-container');
 
-    // Function to render wishlist items
     function renderWishlist() {
         wishlistContainer.empty(); // Clear existing items
 
@@ -52,30 +50,27 @@ $(document).ready(function () {
         const index = $(this).data('index');
         const item = wishlist[index];
 
-        // Assuming you have a cart array, add the item to the cart (Cart functionality needs to be implemented)
+        
         console.log(`${item.name} added to the cart`);
-        // You can add more code here to actually add the item to a cart array or local storage
 
-        // Optional: Feedback or animation when item is added to the cart
         alert(`${item.name} has been added to your cart.`);
     });
 
-    // Remove item from wishlist
     $(document).on('click', '.remove-button', function () {
         const index = $(this).data('index');
 
-        // Animate removal
+  
         const cardToRemove = $(this).closest('.wishlist-card');
         cardToRemove.fadeOut(300, function () {
-            wishlist.splice(index, 1); // Remove item from array
-            localStorage.setItem('wishlist', JSON.stringify(wishlist)); // Update local storage
+            wishlist.splice(index, 1); 
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
 
-            // Re-render the wishlist after removal
             renderWishlist();
         });
     });
-    //hamburger menu
 
+
+    //hamburger menu
     $('#more').click(function () {
         $('#navbar').toggle();
     });

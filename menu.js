@@ -39,13 +39,14 @@ $(document).ready(function () {
         const isAlreadyInWishlist = wishlist.some(item => item.name === productName);
 
         if (isAlreadyInWishlist) {
-            // If already in wishlist, remove it
+           
             wishlist = wishlist.filter(item => item.name !== productName);
-            localStorage.setItem('wishlist', JSON.stringify(wishlist)); // Update local storage
-            $(this).find('.wishlist_red').hide(); // Hide red icon
-            $(this).find('.wishlist_black').show(); // Show black icon
+            localStorage.setItem('wishlist', JSON.stringify(wishlist)); 
+            $(this).find('.wishlist_red').hide();
+            $(this).find('.wishlist_black').show(); 
         } else {
-            // If not in wishlist, add it
+
+
             wishlist.push({
                 id: index,
                 image: productImage,
@@ -53,13 +54,12 @@ $(document).ready(function () {
                 description: productDescription,
                 price: productPrice
             });
-            localStorage.setItem('wishlist', JSON.stringify(wishlist)); // Update local storage
-            $(this).find('.wishlist_red').show(); // Show red icon
-            $(this).find('.wishlist_black').hide(); // Hide black icon
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            $(this).find('.wishlist_red').show(); 
+            $(this).find('.wishlist_black').hide(); 
         }
 
-        // Optional: Redirect to wishlist page after adding/removing item
-        // window.location.href = 'wishlist.html'; // Uncomment to go to wishlist page after toggle
+       
     });
 
     // Scroll to top button
@@ -75,26 +75,22 @@ $(document).ready(function () {
         $('html, body').animate({ scrollTop: 0 }, 500);
     });
 
-    // Function to check wishlist status and update icons accordingly
+    
     function updateWishlistIcons() {
-        // Get the current wishlist from localStorage
         let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-        // Loop through each card and check if it's in the wishlist
         $('.card').each(function () {
             let card = $(this);
             let productName = card.find('.text_section h2').text();
             
-            // Check if the current card is in the wishlist
             const isInWishlist = wishlist.some(item => item.name === productName);
 
-            // Update the wishlist icon based on the item state
             if (isInWishlist) {
-                card.find('.wishlist_red').show(); // Show red icon
-                card.find('.wishlist_black').hide(); // Hide black icon
+                card.find('.wishlist_red').show(); 
+                card.find('.wishlist_black').hide(); 
             } else {
-                card.find('.wishlist_red').hide(); // Hide red icon
-                card.find('.wishlist_black').show(); // Show black icon
+                card.find('.wishlist_red').hide(); 
+                card.find('.wishlist_black').show(); 
             }
         });
     }
